@@ -13,6 +13,7 @@ Approval, rejection and decision time statistics for Adopt a subreddit program b
   - [07/24](#0724)
   - [06/24](#0624)
 - [How to run](#how-to-run)
+- [License](#license)
 
 This repository includes:
 - Scraper script that uses pullpush API for getting data from r/redditrequest
@@ -61,3 +62,7 @@ This repository includes:
 2. Adjust values in **scrape.ts** file: on line 116 adjust dates: after and before. Script will parse starting from before and sorted in descending order to older posts, so you need to change second argument (before) each time you restart script.
 3. Run scrape.ts with [Bun](https://bun.sh): `bun scrape.ts`
 4. After that, comments.json will be generated, use `bun analys.ts` and you will get list of values needed to be inserted into spreadsheets starting from the very first row. Just copy and paste them into B1 cell and they will populate needed rows. Do not change order of output in analys.ts or it will mess up data in spreadsheets. You might get errors like `No autoreply for`. You can ignore them, as there will be data cutoffs where you scraped result of request, but not initial posting of it.
+
+# License
+
+[MIT](./LICENSE.md)
